@@ -1,0 +1,35 @@
+{% block table %}
+<table>
+    <TR>
+        <TH class="header">Date</TH>
+        <TH class="header">New Dev</TH>
+        <TH class="header">Old Dev</TH>
+        <TH class="header">Analytics</TH>
+        <TH class="header">Other</TH>
+        <TH class="header">Actions</TH>
+     </TR>
+    {% for item in data %}
+    <TR>
+       <TD class="date-column">{{item.date}}</TD>
+       <TD class="new-dev-column">{{item.new_dev}}</TD>
+       <TD class="old-dev-column"><SPAN>{{item.old_dev}}</SPAN></TD>
+       <TD class="analytics-column"><SPAN>{{item.analytics}}</SPAN></TD>
+       <TD class="other-column"><SPAN>{{item.other}}</SPAN></TD>
+       <TD>
+            <button class="edit-button">Edit</button>
+            <form action="{{ url_for('delete', date=item['date']) }}" method="POST">
+                <button type="submit" onclick="return confirm('Are you sure you want to delete this post?')">Delete Post</button>
+            </form>
+       </TD>
+    </TR>
+    {% endfor %}
+    <TR>
+       <TD class="total-label">Total</TD>
+       <TD class="new-dev-total">{{ data|sum(attribute='new_dev') }}</TD>
+       <TD class="old-dev-total"><SPAN>{{ data|sum(attribute='old_dev') }}</SPAN></TD>
+       <TD class="analytics-total"><SPAN>{{ data|sum(attribute='analytics') }}</SPAN></TD>
+       <TD class="other-total"><SPAN>{{ data|sum(attribute='other') }}</SPAN></TD>
+       <TD></TD>
+    </TR>
+</table>
+{% endblock %}

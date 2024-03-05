@@ -1,0 +1,128 @@
+.month-nav {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.month-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+    font-size: 4.375rem !important;
+    vertical-align: top;
+}
+
+.nav-item {
+    margin: 0.125rem;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+.month-title {
+    margin-top: 1rem;
+}
+
+.table-container {
+    display: flex;
+    margin-top: 8rem;
+}
+
+.left-table {
+    flex: 80%;
+}
+
+.right-buttons {
+    flex: 20%;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.styled-table thead tr {
+    background-color: #f8f9fa;
+}
+
+.styled-table th, .styled-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40%;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-blue {
+    background-color: #007BFF;
+}
+
+.btn-blue:hover {
+    background-color: #0056b3;
+}
+
+.btn-green {
+    background-color: #28a745;
+}
+
+.btn-green:hover {
+    background-color: #1e7e34;
+}
+
+.btn-grey {
+    background-color: #475a6b;
+}
+
+.btn-grey:hover {
+    background-color: #5a6d7c;
+}
